@@ -1,0 +1,27 @@
+@import url("reset.css");
+@import url("styles/header.css");
+@import url("styles/mesa.css");
+@import url("styles/botoes.css");
+@import url("styles/carta.css");
+:root {
+    --cor-preto: #000000;
+    --cor-roxo: #2F3061;
+    --cor-verde: #082D0F;
+    --cor-azul-claro: #C1DBE3;
+    --cor-bege: #C1BDB3;
+    --fonte-principal: "Roboto", sans-serif;
+    
+}
+
+body {
+    background-image: url("assets/BackGround.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}

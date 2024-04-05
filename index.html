@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>BlackJack</title>
+</head>
+<body>
+    <header class="titulo">
+        <h2 class="titulo__texto">BlackJack</h2>
+    </header>
+    <section class="mesa">
+        <div class="dealer">
+            <div class="pontuacaoDealer" id="pontuacaoDealer"></div>
+            <div class="cartas dealerCartas" id="dealerCartas"></div>
+        </div>
+        <div class="meio" id="meio"><button class="botao iniciar" id="iniciar" onclick="iniciar()">Iniciar</button></div>
+        <div class="jogador">
+            <div class="pontuacaoJogador" id="pontuacaoJogador"></div>
+            <div class="cartas jogadorCartas" id="jogadorCartas"></div>
+        </div>
+    </section>
+    <section class="botoes" id="botoes">
+        <button class="botao ficar" id="ficar" onclick="ficar()">Ficar</button>
+        <button class="botao pedir" id="pedir" onclick="pedir()">Pedir</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

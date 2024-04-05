@@ -1,0 +1,16 @@
+.carta{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-bege);
+    border: 1px solid black;
+    margin: 0.1em;
+    padding: 0 0.1em;
+    text-align: center;
+    width: 25px;
+}
+.iconeCima{
+    text-align: left;
+}
+.iconeBaixo{
+    text-align: right;
+}

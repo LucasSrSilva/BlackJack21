@@ -1,0 +1,22 @@
+.mesa{
+    background: rgb(8,45,15);
+    background: radial-gradient(circle, rgba(8,45,15,1) 0%, rgba(37,99,15,1) 50%, rgba(27,130,4,1) 100%);
+    width: 40vh;
+    height: 60vh;
+    border-radius: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.473) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.308) 0px 4px 8px, rgba(0, 0, 0, 0.418) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.meio{
+    padding: 30% 0;
+}
+.cartas{
+    display: flex;
+}
+p{
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}

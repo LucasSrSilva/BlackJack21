@@ -1,0 +1,12 @@
+.titulo {
+    background-color: var(--cor-preto);
+    padding: 1em 100%;
+    margin: 0 0 5em 0;
+    display: flex;
+    justify-content: center;
+}
+.titulo__texto{
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    color: var(--cor-bege);
+}

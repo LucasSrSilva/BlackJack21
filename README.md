@@ -18,3 +18,10 @@ Jogada do Jogador:
 
 - O jogador decide se quer "ficar" (permanecer com a pontuação atual) ou "pedir carta" (receber uma carta adicional).
 Se o jogador exceder 21 pontos, ele "estoura" e perde automaticamente.
+
+
+
+- Se nenhum dos jogadores estourar, o vencedor é aquele cuja pontuação estiver mais próxima de 21.
+Se o jogador tiver uma pontuação maior que o dealer sem exceder 21, ele ganha.
+Se o dealer tiver uma pontuação maior que o jogador sem exceder 21, ele ganha.
+Se houver um empate, ninguém ganha.

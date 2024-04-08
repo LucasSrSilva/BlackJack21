@@ -53,10 +53,11 @@ function iniciar(){
         let boaSorte = document.createElement('p');
         let botaoIniciar = document.getElementById('iniciar');
 
-        if(reiniciado === false){
-            boaSorte.textContent = "Boa sorte!";
-            divMeio.replaceChild(boaSorte, botaoIniciar);
-        }
+        boaSorte.classList.add('meio__texto');
+        boaSorte.textContent = "Boa sorte!";
+        boaSorte.id = 'textoMeio'
+        divMeio.replaceChild(boaSorte, botaoIniciar);
+        
     }
 }
 
@@ -144,8 +145,8 @@ function ficar(){
     if(jogoIniciado === true){
         let dealerPontos = pontuar(dealerCartas);
         let jogadorPontos = pontuar(jogadorCartas);
-        document.getElementById('pontuacaoDealer').innerHTML = dealerPontos + "Pontos!";
-        document.getElementById('pontuacaoJogador').innerHTML = jogadorPontos + "Pontos!";
+        document.getElementById('pontuacaoDealer').innerHTML = dealerPontos + " Pontos!";
+        document.getElementById('pontuacaoJogador').innerHTML = jogadorPontos + " Pontos!";
 
 
         var botaoficar = document.getElementById('ficar');
@@ -160,6 +161,8 @@ function ficar(){
         botaoReiniciar.textContent = 'Reiniciar';
         botaoReiniciar.addEventListener('click', reiniciar);
         botoes.appendChild(botaoReiniciar);
+
+        vencedor();
     }else{
         alert('inicie o jogo!');
     }
@@ -196,9 +199,45 @@ function reiniciar(){
     botaoPedir.id = 'pedir';
     botaoPedir.addEventListener('click', pedir);
 
+    let divMeio = document.getElementById('meio');
+    let meioTexto = document.getElementById('textoMeio')
+    let meioBotao = document.createElement('button');
+    meioBotao.classList = 'botao inciar';
+    meioBotao.textContent = 'Iniciar';
+    meioBotao.id = 'iniciar';
+    meioBotao.onclick = iniciar;
+
+
+    divMeio.replaceChild(meioBotao, meioTexto);
+
+
     botoes.appendChild(botaoFicar);
     botoes.appendChild(botaoPedir);
-    reiniciado = true;
-    iniciar()
+
+    mostrarCartas(dealerCartas, 'dealerCartas', false);
+    mostrarCartas(jogadorCartas, 'jogadorCartas', true);
     
+    document.getElementById('pontuacaoDealer').innerHTML = '';
+    document.getElementById('pontuacaoJogador').innerHTML = '';
+}
+
+function vencedor(){
+    let divMeio = document.getElementById('meio');
+    let vitoria = document.createElement('p');
+    let boaSorte = document.getElementById('textoMeio');
+    vitoria.classList.add('meio__texto');
+    vitoria.id = 'textoMeio';
+    
+
+    let dealerPontos = pontuar(dealerCartas);
+    let jogadorPontos = pontuar(jogadorCartas);
+    if(jogadorPontos <= 21 && jogadorPontos > dealerPontos){
+        vitoria.textContent = "Parabéns, você venceu!";
+    }else if(jogadorPontos === dealerPontos){
+        vitoria.textContent = "Você empatou!"
+    }else{
+        vitoria.textContent = "Você perdeu :("
+    }
+    vitoria.classList.add('meio__texto');
+    divMeio.replaceChild(vitoria, boaSorte);
 }

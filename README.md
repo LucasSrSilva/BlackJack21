@@ -1,5 +1,6 @@
 # BlackJack21
  Criação de um blackjack. <br>
+ Pages: https://lucassrsilva.github.io/BlackJack21/ <br>
 Preparação do Jogo:
 
 - Você precisará de um baralho de cartas. Um baralho padrão tem 52 cartas, divididas em quatro naipes (copas, ouros, paus e espadas), cada um com 13 cartas (de 2 a 10, e depois valete, dama, rei e ás).
